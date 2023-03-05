@@ -36,5 +36,19 @@ namespace Bubble_Cafe.Admin_Panel
                 img_picture.ImageUrl = "~/ImageSource/" + citations.BookImage;
             }
         }
+
+        protected void lbtn_acceptcitation_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(Request.QueryString["citid"]);
+            dm.CitationState(id);
+            Response.Redirect("Default.aspx");
+        }
+
+        protected void lbtn_deletecitation_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(Request.QueryString["citid"]);
+            dm.CitationHardDelete(id);
+            Response.Redirect("CitationListing.aspx");
+        }
     }
 }

@@ -706,10 +706,18 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText = "DELETE FROM Users WHERE ID = @id";
+                cmd.CommandText = "DELETE FROM Citations WHERE Users_ID = @id";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "DELETE FROM Comments WHERE Users_ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "DELETE FROM Users WHERE ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
                 cmd.ExecuteNonQuery();
             }
             finally { con.Close(); }
@@ -1059,10 +1067,38 @@ namespace DataAccessLayer
             catch { return false; }
             finally { con.Close(); }
         }
+        public void CitationState(int id)
+        {
+            try
+            {
+                cmd.CommandText = "UPDATE Citations SET State = 0 WHERE ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            finally { con.Close(); }
+        }
+        public void CitationHardDelete(int id)
+        {
+            try
+            {
+                cmd.CommandText = "DELETE FROM Comments WHERE Citations_ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "DELETE FROM Citations WHERE ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
+            }
+            finally { con.Close(); }
+        }
         #endregion
 
         #region Comment
-        
+
         #endregion
 
     }

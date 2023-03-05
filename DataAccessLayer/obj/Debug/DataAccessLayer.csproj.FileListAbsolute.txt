@@ -4,3 +4,9 @@ C:\Users\merda\OneDrive\Desktop\Bubble Cafe\Bubble_Cafe\DataAccessLayer\obj\Debu
 C:\Users\merda\OneDrive\Desktop\Bubble Cafe\Bubble_Cafe\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 C:\Users\merda\OneDrive\Desktop\Bubble Cafe\Bubble_Cafe\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\merda\OneDrive\Desktop\Bubble Cafe\Bubble_Cafe\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\merda\OneDrive\Documents\GitHub\Buuble_Cafe_V2.0\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\merda\OneDrive\Documents\GitHub\Buuble_Cafe_V2.0\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\merda\OneDrive\Documents\GitHub\Buuble_Cafe_V2.0\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\merda\OneDrive\Documents\GitHub\Buuble_Cafe_V2.0\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\merda\OneDrive\Documents\GitHub\Buuble_Cafe_V2.0\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\merda\OneDrive\Documents\GitHub\Buuble_Cafe_V2.0\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

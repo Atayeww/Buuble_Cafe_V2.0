@@ -94,5 +94,23 @@ namespace Bubble_Cafe.Admin_Panel
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrl_citbookpage;
+
+        /// <summary>
+        /// lbtn_acceptcitation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbtn_acceptcitation;
+
+        /// <summary>
+        /// lbtn_deletecitation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbtn_deletecitation;
     }
 }
