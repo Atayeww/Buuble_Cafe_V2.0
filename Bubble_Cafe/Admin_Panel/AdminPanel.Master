@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminPanel.master.cs" Inherits="Bubble_Cafe.Admin_Panel.AdminPanel" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Bubble Cafe</title>
+    <link href="Assets/css/MainPage.css" rel="stylesheet" />
+    <link href="Assets/css/StylePages.css" rel="stylesheet" />
+    <link href="Assets/cssFiles/fontawesome/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <div class="icon">
+                <a href="Default.aspx">
+                    <img src="Assets/images/Bubble_Cafe_Icon_White.png" />
+                </a>
+            </div>
+            <div class="exit">
+                <label><i class="fa-solid fa-user"></i> &nbsp;</label>
+                <asp:Label ID="lbl_managers" runat="server"></asp:Label>
+                <asp:LinkButton ID="lbtn_exit" runat="server" CssClass="exiticon" OnClick="lbtn_exit_Click">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i> &nbsp;Çıkış</asp:LinkButton>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="sidebar">
+            <a href="Default.aspx">
+                <div class="tools">
+                    <i class="fa-solid fa-house"></i> &nbsp;Ana Sayfa
+                </div>
+            </a>
+            <a href="CategoryListing.aspx">
+                <div class="tools">
+                    <i class="fa-solid fa-layer-group"></i> &nbsp;Kategoriler
+                </div>
+            </a>
+            <a href="WriterListing.aspx">
+                <div class="tools">
+                    <i class="fa-solid fa-feather"></i> &nbsp;Yazarlar
+                </div>
+            </a>
+            <a href="BookListing.aspx">
+                <div class="tools">
+                    <i class="fa-solid fa-book"></i> &nbsp;Kitaplar
+                </div>
+            </a><a href="CitationListing.aspx">
+                <div class="tools">
+                    <i class="fa-solid fa-bookmark"></i> &nbsp;Alıntılar
+                </div>
+            </a><a href="#">
+                <div class="tools">
+                    <i class="fa-solid fa-comment"></i> &nbsp;Yorumlar
+                </div>
+            </a><a href="UsersListing.aspx">
+                <div class="tools">
+                    <i class="fa-solid fa-users"></i> &nbsp;Üye İşlemleri
+                </div></a>
+        </div>
+        <div class="contentContainer">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

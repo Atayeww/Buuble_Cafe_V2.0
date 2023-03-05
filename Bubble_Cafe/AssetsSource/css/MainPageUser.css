@@ -1,0 +1,117 @@
+﻿*, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Poppins;
+}
+
+.header {
+    margin: 0px auto;
+    width: 1430px;
+    min-height: 30px;
+    background-color: #F0E9E3;
+    padding: 10px;
+}
+
+    .header .icon {
+        float: left;
+        width: 200px;
+    }
+
+        .header .icon img {
+            width: 170px;
+            display: block;
+            margin: 0px auto;
+        }
+
+    .header .login {
+        width: 450px;
+        float: right;
+        color: #59291E;
+    }
+
+        .header .login .user {
+            margin-top: 12px;
+        }
+
+            .header .login .user a {
+                padding: 5px 15px;
+                background-color: #A67C58;
+                text-decoration: none;
+                color: white;
+                border-radius: 5px;
+            }
+
+.tools {
+    min-height: 10px;
+    width: 1450px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid #F0E9E3;
+}
+
+.menu {
+    margin-left: 250px;
+    float: left;
+    margin-top: 10px;
+}
+
+    .menu .hiddenmenu {
+        float: left;
+        margin: 0px 10px;
+    }
+
+    .menu .others {
+        float: left;
+        font-weight: 800;
+        text-decoration: none;
+        padding: 5px;
+        margin: 0px 10px;
+        color: #A67C58;
+    }
+
+    .menu .hiddenmenu thead tr td {
+        padding: 5px;
+    }
+
+        .menu .hiddenmenu thead tr td a {
+            color: #A67C58;
+            text-decoration: none;
+            font-weight: 800;
+        }
+
+    .menu .hiddenmenu tbody {
+        background-color: #F0E9E3;
+        position: absolute;
+        box-shadow: 12px 11px 10px -9px rgba(0,0,0,0.33);
+    }
+
+        .menu .hiddenmenu tbody tr {
+            visibility: collapse;
+        }
+
+    .menu .hiddenmenu:hover tbody tr {
+        visibility: visible;
+    }
+
+    .menu .hiddenmenu tbody tr td {
+        padding: 10px;
+        text-align: center;
+    }
+
+        .menu .hiddenmenu tbody tr td a {
+            text-decoration: none;
+            color: #A67C58;
+        }
+
+            .menu .hiddenmenu tbody tr td a:hover {
+                color: #A68C6D;
+            }
+.contentContainer {
+    width: 1450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+

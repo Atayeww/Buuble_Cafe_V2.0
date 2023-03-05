@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="Bubble_Cafe.User" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Bubble Cafe</title>
+    <link href="AssetsSource/css/MainPageUser.css" rel="stylesheet" />
+    <link href="AssetsSource/css/StyleUserPage.css" rel="stylesheet" />
+    <link href="AssetsSource/fontawesome/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <div class="icon">
+                <a href="Default.aspx">
+                    <img src="ImageSource/Bubble_Cafe_Brown.png" />
+                </a>
+            </div>
+            <div class="menu">
+                <a href="Default.aspx" class="others">Ana Sayfa</a>
+                <table cellpadding="0" cellspacing="0" class="hiddenmenu">
+                    <thead>
+                        <tr>
+                            <td><a href="#">Kategoriler</a></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#">Roman</a></td>
+                            <td><a href="#">Hikaye</a></td>
+                            <td><a href="#">Tarih</a></td>
+                            <td><a href="#">Bilim Kurgu</a></td>
+                            <td><a href="#">Deneme</a></td>
+                            <td><a href="#">Şiir</a></td>
+                            <td><a href="#">Anlatı</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Biyografi</a></td>
+                            <td><a href="#">Eğitim</a></td>
+                            <td><a href="#">Sanat</a></td>
+                            <td><a href="#">Fantastik</a></td>
+                            <td><a href="#">Psikoloji</a></td>
+                            <td><a href="#">Felsefe</a></td>
+                            <td><a href="#">Soyoloji</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="CitUserAdd.aspx" class="others">Alıntı Yap</a>
+            </div>
+            <div class="login">
+                <asp:Panel ID="pnl_login" runat="server" Visible="false" CssClass="user" style="float:right;">
+                    <i class="fa-solid fa-at"></i>
+                    <asp:Label ID="lbl_username" runat="server" Style="margin-right: 15px; font-size:14pt;"></asp:Label>
+                <a href="#" class="others"><i class="fa-regular fa-bell"></i></a>
+                <a href="#" class="others"><i class="fa-solid fa-sliders"></i></a>
+                    <asp:LinkButton ID="lbtn_userexit" runat="server" OnClick="lbtn_userexit_Click">Çıkış</asp:LinkButton>
+                </asp:Panel>
+                <asp:Panel ID="pnl_notlogin" runat="server" Visible="true" CssClass="user" style="float:right;">
+                    <a href="Signup.aspx" style="margin-right: 15px;">Kayıt Ol</a>
+                    <a href="Login.aspx">Oturum Aç</a>
+                </asp:Panel>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+        <div class="contentContainer">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

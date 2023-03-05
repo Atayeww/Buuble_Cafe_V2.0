@@ -1,0 +1,142 @@
+﻿*, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Poppins;
+}
+
+.citationDiv {
+    overflow: hidden;
+    padding: 5px;
+    width: 260px;
+    height: 400px;
+    background-color: #FFFFFF;
+    border: 1px solid #F2EEE9;
+    color: #969696;
+    border-radius: 5px;
+    margin: 10px;
+    float: left;
+    box-shadow: 7px 8px 7px -5px rgba(0,0,0,0.37);
+}
+
+    .citationDiv .picture {
+        float: left;
+        width: 270px;
+    }
+
+    .citationDiv .bookinfo {
+        font-family: 'Times New Roman';
+        color: #59291E;
+        font-size: 15pt;
+    }
+
+.frame {
+    width: 1450px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #575757;
+}
+
+    .frame .row {
+        margin: 20px;
+    }
+
+        .frame .row .textbox {
+            padding: 10px 20px;
+            border-radius: 5px;
+            width: 300px;
+            border: 1px solid #C8B0A4;
+        }
+
+        .frame .row .editLinkButton {
+            width: 200px;
+            color: #1F7A48;
+            background-color: #3EFA93;
+            padding: 10px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-left: 250px;
+        }
+
+            .frame .row .editLinkButton:hover {
+                color: #2BAE66;
+                background-color: #89FABC;
+            }
+
+    .frame .success {
+        height: 40px;
+        background-color: #3EFA93;
+        color: #1F7A48;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 900;
+        box-shadow: -1px -1px 45px 16px rgba(255,255,255,0.33) inset;
+    }
+
+    .frame .fail {
+        height: 40px;
+        background-color: #FF4858;
+        color: #BD2A2E;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 900;
+        box-shadow: -1px -1px 45px 16px rgba(255,255,255,0.33) inset;
+    }
+
+.user a {
+    padding: 5px 15px;
+    background-color: #A67C58;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.letter {
+    color: #59291E;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.citdetail {
+    color: #59291E;
+    height: 100%;
+    width: 1350px;
+    padding: 50px;
+}
+
+    .citdetail .citimage {
+        margin-left: auto;
+        margin-right: auto;
+        width: 400px;
+    }
+
+    .citdetail .citusername {
+        min-height: 20px;
+        background-color: #F0EAEE;
+        padding: 5px 10px;
+        font-weight: 700;
+    }
+
+        .citdetail .citusername .liked {
+            float: right;
+            margin-right: 50px;
+            font-size: 14pt;
+        }
+
+            .citdetail .citusername .liked a {
+                color: #59291E;
+            }
+
+    .citdetail .citation {
+        padding: 5px 10px;
+        border-bottom: 1px solid #CFC0C5;
+        text-align: justify;
+    }
+
+    .citdetail .citinfo {
+        padding: 5px 10px;
+        font-family: Arial;
+        font-size: 13pt;
+    }

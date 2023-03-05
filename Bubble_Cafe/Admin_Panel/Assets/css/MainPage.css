@@ -1,0 +1,72 @@
+﻿*, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Poppins;
+}
+
+.header {
+    min-height: 30px;
+    background-color: #EBF0F2;
+}
+
+    .header .icon {
+        width: 250px;
+        background-color: #3C5469;
+        float: left;
+        padding: 5px 0px;
+    }
+
+        .header .icon img {
+            width: 150px;
+            display: block;
+            margin: 0px auto;
+        }
+
+    .header .exit {
+        color: #023535;
+        width: 250px;
+        float: right;
+        margin-right: 20px;
+        margin-top: 15px;
+    }
+
+        .header .exit .exiticon {
+            color: #023535;
+            text-decoration: none;
+            float: right;
+        }
+
+.sidebar {
+    width: 250px;
+    height: 700px;
+    background-color: #293742;
+    float: left;
+}
+
+    .sidebar .tools {
+        padding: 5px 10px;
+        border-bottom: 1px solid #DFF0FF;
+    }
+
+        .sidebar .tools:hover {
+            background-color: #DFF0FF;
+        }
+
+    .sidebar a {
+        text-decoration: none;
+        color: #DFF0FF;
+    }
+
+        .sidebar a:hover {
+            color: #293742;
+        }
+
+.contentContainer {
+    width: 81%;
+    min-height: 500px;
+    float: left;
+    padding: 10px;
+}

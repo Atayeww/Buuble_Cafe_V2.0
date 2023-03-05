@@ -1,0 +1,6 @@
+C:\Users\merda\OneDrive\Desktop\Bubble Cafe\Bubble_Cafe\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\merda\OneDrive\Desktop\Bubble Cafe\Bubble_Cafe\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\merda\OneDrive\Desktop\Bubble Cafe\Bubble_Cafe\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\merda\OneDrive\Desktop\Bubble Cafe\Bubble_Cafe\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\merda\OneDrive\Desktop\Bubble Cafe\Bubble_Cafe\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\merda\OneDrive\Desktop\Bubble Cafe\Bubble_Cafe\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

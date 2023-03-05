@@ -1,0 +1,212 @@
+﻿*, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Poppins;
+}
+
+.categoryTable {
+    border: 1px solid #3C5469;
+    border-radius: 3px;
+    width: 100%;
+    text-align: center;
+    color: #3C5469;
+}
+
+    .categoryTable thead {
+        background-color: #3C5469;
+        color: #F1FAFF;
+    }
+
+        .categoryTable thead tr td {
+            padding: 3px 10px;
+        }
+
+    .categoryTable tbody tr td {
+        padding: 3px 10px;
+        border-bottom: 1px solid #D2E8E3;
+    }
+
+        .categoryTable tbody tr td .editbutton {
+            text-decoration: none;
+            color: #026E81;
+            background-color: #00BBC9;
+            border-radius: 5px;
+            padding: 3px 5px;
+        }
+
+            .categoryTable tbody tr td .editbutton:hover {
+                color: #22BABB;
+                background-color: #72F2EB;
+            }
+
+        .categoryTable tbody tr td .deletebutton {
+            color: #731702;
+            background-color: #F22E2E;
+            padding: 3px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+            .categoryTable tbody tr td .deletebutton:hover {
+                color: #BD2A2E;
+                background-color: #FF4858;
+            }
+
+.helper a {
+    text-decoration: none;
+    text-align: center;
+}
+
+    .helper a .categoryAddButton {
+        width: 200px;
+        color: #1F7A48;
+        background-color: #3EFA93;
+        margin-top: 20px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 10px 0px;
+        border-radius: 5px;
+    }
+
+        .helper a .categoryAddButton:hover {
+            color: #2BAE66;
+            background-color: #89FABC;
+        }
+
+.frame {
+    border: 1px solid #3C5469;
+    border-radius: 5px;
+    width: 100%;
+    color: #023535;
+}
+
+    .frame .target {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom: 1px solid #729599;
+        height: 30px;
+        background-color: #3C5469;
+        color:white;
+        padding-left: 20px;
+        padding-top: 5px;
+    }
+
+    .frame .success {
+        height: 40px;
+        background-color: #3EFA93;
+        color: #1F7A48;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 900;
+        box-shadow: -1px -1px 45px 16px rgba(255,255,255,0.33) inset;
+    }
+
+    .frame .fail {
+        height: 40px;
+        background-color: #FF4858;
+        color: #BD2A2E;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 900;
+        box-shadow: -1px -1px 45px 16px rgba(255,255,255,0.33) inset;
+    }
+
+    .frame .raw {
+        margin: 20px;
+    }
+
+        .frame .raw .searchbox {
+            width: 250px;
+            padding: 7px;
+            border: 1px solid #3C5469;
+            border-radius: 5px;
+        }
+
+        .frame .raw .editLinkButton {
+            width: 200px;
+            color: #1F7A48;
+            background-color: #3EFA93;
+            padding: 10px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+            .frame .raw .editLinkButton:hover {
+                color: #2BAE66;
+                background-color: #89FABC;
+            }
+
+.label {
+    font-size: 11pt;
+}
+
+.citationDiv {
+    overflow: hidden;
+    padding: 5px;
+    width: 260px;
+    height: 400px;
+    background-color: #FFFFFF;
+    border: 1px solid #729599;
+    color: #969696;
+    border-radius: 5px;
+    margin: 10px;
+    float: left;
+    box-shadow: 7px 8px 7px -5px rgba(0,0,0,0.37);
+}
+
+    .citationDiv .picture {
+        float: left;
+        width: 260px;
+    }
+
+    .citationDiv .bookinfo {
+        font-family: 'Times New Roman';
+        color: #023535;
+        font-size: 15pt;
+    }
+
+.citdetail {
+    color: #3C5469;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+
+    .citdetail .citimage {
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px;
+    }
+
+    .citdetail .citusername {
+        min-height: 20px;
+        background-color: #3C5469;
+        padding: 5px 10px;
+        font-weight: 700;
+        color:white;
+    }
+
+        .citdetail .citusername .liked {
+            float: right;
+            margin-right: 50px;
+            font-size: 14pt;
+        }
+
+            .citdetail .citusername .liked a {
+                color: #59291E;
+            }
+
+    .citdetail .citation {
+        padding: 5px 10px;
+        border-bottom: 1px solid #CFC0C5;
+        text-align: justify;
+    }
+
+    .citdetail .citinfo {
+        padding: 5px 10px;
+        font-family: Arial;
+        font-size: 13pt;
+    }
