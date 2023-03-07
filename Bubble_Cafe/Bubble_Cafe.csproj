@@ -2136,6 +2136,7 @@
     <Content Include="Admin_Panel\CategoryListing.aspx" />
     <Content Include="Admin_Panel\CitationListing.aspx" />
     <Content Include="Admin_Panel\CitationMoreDetail.aspx" />
+    <Content Include="Admin_Panel\CommentListAdmin.aspx" />
     <Content Include="Admin_Panel\Default.aspx" />
     <Content Include="Admin_Panel\UsersAdd.aspx" />
     <Content Include="Admin_Panel\UsersListing.aspx" />
@@ -4203,6 +4204,7 @@
     <Content Include="AssetsSource\fontawesome\svgs\solid\z.svg" />
     <Content Include="CitUserAdd.aspx" />
     <Content Include="CitUserList.aspx" />
+    <Content Include="CommentListUser.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="ImageSource\Bubble_Cafe_Brown.png" />
     <Content Include="ImageSource\none.png" />
@@ -4281,6 +4283,13 @@
     <Compile Include="Admin_Panel\CitationMoreDetail.aspx.designer.cs">
       <DependentUpon>CitationMoreDetail.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin_Panel\CommentListAdmin.aspx.cs">
+      <DependentUpon>CommentListAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Panel\CommentListAdmin.aspx.designer.cs">
+      <DependentUpon>CommentListAdmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin_Panel\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -4336,6 +4345,13 @@
     </Compile>
     <Compile Include="CitUserList.aspx.designer.cs">
       <DependentUpon>CitUserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommentListUser.aspx.cs">
+      <DependentUpon>CommentListUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommentListUser.aspx.designer.cs">
+      <DependentUpon>CommentListUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

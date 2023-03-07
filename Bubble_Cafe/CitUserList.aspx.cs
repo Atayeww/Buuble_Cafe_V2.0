@@ -47,6 +47,11 @@ namespace Bubble_Cafe
                 {
                     ltrl_citview.Text = citations.CitationView.ToString();
                 }
+                if (Session["user"] != null)
+                {
+                    pnl_login.Visible = true;
+                    pnl_notlogin.Visible = false;
+                }
             }
         }
 
@@ -72,6 +77,20 @@ namespace Bubble_Cafe
             {
                 ltrl_likedshow.Text = citations.Liked.ToString();
             }
+        }
+
+        protected void lbtn_commentsend_Click(object sender, EventArgs e)
+        {
+            Comment comment = new Comment();
+            int cid = Convert.ToInt32(Request.QueryString["citid"]);
+            comment.Citations_ID= cid;
+            Users users = (Users)Session["user"];
+            int usid = users.ID;
+            comment.Users_ID= usid;
+            comment.State = true;
+            comment.CommentDateTime= DateTime.Now;
+            comment.Commnet = tb_writecomment.Text;
+            dm.CommentAdd(comment);
         }
     }
 }

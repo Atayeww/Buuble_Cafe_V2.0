@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User.Master" AutoEventWireup="true" CodeBehind="CitUserList.aspx.cs" Inherits="Bubble_Cafe.CitUserList" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User.Master" AutoEventWireup="true" CodeBehind="CitUserList.aspx.cs" Inherits="Bubble_Cafe.CitUserList" ValidateRequest="false"%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="AssetsSource/css/StyleUserPage.css" rel="stylesheet" />
@@ -43,6 +43,20 @@
             Sayfa:
             <asp:Literal ID="ltrl_citbookpage" runat="server"></asp:Literal>
         </div>
+        <div class="commentwrite">
+            <asp:Panel ID="pnl_login" runat="server" Visible="false">
+                <asp:TextBox ID="tb_writecomment" runat="server" TextMode="MultiLine" CssClass="textbox" placeholder="Yorum Yap"></asp:TextBox>
+            <asp:LinkButton ID="lbtn_commentsend" runat="server" CssClass="commentsend" OnClick="lbtn_commentsend_Click"><i class="fa-solid fa-paper-plane"></i></asp:LinkButton>
+            <div style="clear:both"></div>
+            </asp:Panel>
+            <asp:Panel ID="pnl_notlogin" runat="server" Visible="true">
+                <div class="letter" style="margin-top:20px;">
+            <h2>
+                 Yorum Yapmak İçin <a href="Login.aspx">Giriş</a> Yapınız!
+            </h2>
+        </div>
+            </asp:Panel>
+    </div>
         <div style="clear: both"></div>
     </div>
 </asp:Content>

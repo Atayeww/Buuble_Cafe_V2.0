@@ -99,6 +99,10 @@ body {
     margin-top: 200px;
 }
 
+    .letter a {
+        color: #59291E;
+    }
+
 .citdetail {
     color: #59291E;
     height: 100%;
@@ -139,4 +143,49 @@ body {
         padding: 5px 10px;
         font-family: Arial;
         font-size: 13pt;
+    }
+
+.commentwrite {
+    margin-top: 30px;
+}
+
+    .commentwrite .textbox {
+        padding: 10px 20px;
+        border-radius: 5px;
+        width: 500px;
+        height: 50px;
+        border: 1px solid #C8B0A4;
+        float: left;
+    }
+
+    .commentwrite .commentsend {
+        margin-top: 10px;
+        color: white;
+        background-color: #A67360;
+        margin-left: 10px;
+        padding: 5px;
+        font-size: 18pt;
+        float: left;
+        width: 35px;
+        text-align: center;
+        border: 1px solid #A67360;
+        border-radius: 90px;
+    }
+
+.commentframe {
+    width: 100%;
+    color: #969696;
+    border: 1px solid #8C6A56;
+    border-radius:5px;
+}
+    .commentframe .usercomment {
+        width: 100%;
+        min-height: 20px;
+        background-color: #F0EAEE;
+        float:left;
+        padding:5px 10px;
+        font-size:14pt;
+    }
+    .commentframe .commentCom{
+        padding:10px 15px;
     }

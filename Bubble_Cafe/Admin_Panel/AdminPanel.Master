@@ -52,7 +52,7 @@
                 <div class="tools">
                     <i class="fa-solid fa-bookmark"></i> &nbsp;Alıntılar
                 </div>
-            </a><a href="#">
+            </a><a href="CommentListAdmin.aspx">
                 <div class="tools">
                     <i class="fa-solid fa-comment"></i> &nbsp;Yorumlar
                 </div>

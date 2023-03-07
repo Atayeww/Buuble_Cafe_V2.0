@@ -1098,7 +1098,72 @@ namespace DataAccessLayer
         #endregion
 
         #region Comment
-
+        public List<Comment> CommnetList(bool state)
+        {
+            try
+            {
+                List<Comment> list = new List<Comment>();
+                cmd.CommandText = "SELECT C.ID, C.Users_ID, U.Nickname, C.Citations_ID, C.CommentDateTime, C.Comment FROM Comments AS C JOIN Users AS U ON C.Users_ID = U.ID WHERE C.State = @state";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@state", state);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Comment comment = new Comment();
+                    comment.ID = reader.GetInt32(0);
+                    comment.Users_ID= reader.GetInt32(1);
+                    comment.UserNickname = reader.GetString(2);
+                    comment.Citations_ID = reader.GetInt32(3);
+                    comment.CommentDateTime= reader.GetDateTime(4);
+                    list.Add(comment);
+                }
+                return list;
+            }
+            catch { return null; }
+            finally { con.Close(); }
+        }
+        public Comment CommnetGet(bool state)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT C.ID, C.Users_ID, U.Nickname, C.Citations_ID, C.CommentDateTime, C.Comment FROM Comments AS C JOIN Users AS U ON C.Users_ID = U.ID WHERE C.State = @state";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@state", state);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                Comment comment = new Comment();
+                while (reader.Read())
+                {
+                    comment.ID = reader.GetInt32(0);
+                    comment.Users_ID = reader.GetInt32(1);
+                    comment.UserNickname = reader.GetString(2);
+                    comment.Citations_ID = reader.GetInt32(3);
+                    comment.CommentDateTime = reader.GetDateTime(4);
+                }
+                return comment;
+            }
+            catch { return null; }
+            finally { con.Close(); }
+        }
+        public bool CommentAdd(Comment comment)
+        {
+            try
+            {
+                cmd.CommandText = "INSERT INTO Comments(Users_ID, Citations_ID, CommentDateTime, Comment, State) VALUES (@users_ID, @citations_ID, @commentDateTime, @comment, @state)";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@users_ID", comment.Users_ID);
+                cmd.Parameters.AddWithValue("@citations_ID", comment.Citations_ID);
+                cmd.Parameters.AddWithValue("@commentDateTime", comment.CommentDateTime);
+                cmd.Parameters.AddWithValue("comment", comment.Commnet);
+                cmd.Parameters.AddWithValue("@state", comment.State);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch { return false; }
+            finally { con.Close(); }
+        }
         #endregion
 
     }
