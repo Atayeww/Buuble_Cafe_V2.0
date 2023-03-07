@@ -181,11 +181,13 @@ body {
     .commentframe .usercomment {
         width: 100%;
         min-height: 20px;
-        background-color: #F0EAEE;
-        float:left;
-        padding:5px 10px;
-        font-size:14pt;
+        background-color: #736A62;
+        float: left;
+        padding: 5px 10px;
+        font-size: 14pt;
+        border:1px solid black;
     }
-    .commentframe .commentCom{
-        padding:10px 15px;
+    .commentframe .commnetCom {
+        padding: 10px 15px;
+        margin-top: 10px;
     }

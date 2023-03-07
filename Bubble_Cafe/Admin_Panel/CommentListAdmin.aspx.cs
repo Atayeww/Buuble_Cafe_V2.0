@@ -13,7 +13,7 @@ namespace Bubble_Cafe.Admin_Panel
         DataModel dm = new DataModel();
         protected void Page_Load(object sender, EventArgs e)
         {
-            rp_commentaccept.DataSource = dm.CommnetGet(false);
+            rp_commentaccept.DataSource = dm.CommnetList(false);
             rp_commentaccept.DataBind();
         }
     }

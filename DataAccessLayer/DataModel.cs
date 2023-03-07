@@ -1116,6 +1116,7 @@ namespace DataAccessLayer
                     comment.UserNickname = reader.GetString(2);
                     comment.Citations_ID = reader.GetInt32(3);
                     comment.CommentDateTime= reader.GetDateTime(4);
+                    comment.Commnet = reader.GetString(5);
                     list.Add(comment);
                 }
                 return list;
@@ -1140,6 +1141,7 @@ namespace DataAccessLayer
                     comment.UserNickname = reader.GetString(2);
                     comment.Citations_ID = reader.GetInt32(3);
                     comment.CommentDateTime = reader.GetDateTime(4);
+                    comment.Commnet = reader.GetString(5);
                 }
                 return comment;
             }

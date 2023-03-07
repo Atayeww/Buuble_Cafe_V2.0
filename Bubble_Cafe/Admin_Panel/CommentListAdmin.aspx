@@ -6,16 +6,18 @@
         <ItemTemplate>
             <div class="commentframe">
                 <div class="usercomment">
-                    <div style="float:left">
+                    <div style="float:left;">
                         <i class="fa-solid fa-at"></i><%# Eval("UserNickname") %>
                     </div>
                     <div style="float:right;">
                         <%# Eval("CommentDateTime") %>
                     </div>
                 </div>
+                <br />
                 <div class="commnetCom">
-                    <%# Eval("Comment") %>
+                    <%# Eval("Commnet") %>
                 </div>
+                <div style="clear:both"></div>
             </div>
         </ItemTemplate>
     </asp:Repeater>
