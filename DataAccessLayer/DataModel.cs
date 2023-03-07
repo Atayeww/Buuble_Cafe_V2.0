@@ -1124,13 +1124,14 @@ namespace DataAccessLayer
             catch { return null; }
             finally { con.Close(); }
         }
-        public Comment CommnetGet(bool state)
+        public Comment CommnetGet(int id, bool state)
         {
             try
             {
-                cmd.CommandText = "SELECT C.ID, C.Users_ID, U.Nickname, C.Citations_ID, C.CommentDateTime, C.Comment FROM Comments AS C JOIN Users AS U ON C.Users_ID = U.ID WHERE C.State = @state";
+                cmd.CommandText = "SELECT C.ID, C.Users_ID, U.Nickname, C.Citations_ID, C.CommentDateTime, C.Comment FROM Comments AS C JOIN Users AS U ON C.Users_ID = U.ID WHERE C.State = @state AND C.ID = @id";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@state", state);
+                cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 Comment comment = new Comment();

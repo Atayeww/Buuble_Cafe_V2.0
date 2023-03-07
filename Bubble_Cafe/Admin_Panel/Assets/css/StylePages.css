@@ -215,6 +215,7 @@ body {
     margin-top:20px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom:50px;
     width: 500px;
 }
 
@@ -250,3 +251,25 @@ body {
             color: #BD2A2E;
             background-color: #FF4858;
         }
+.commentframe {
+    width: 100%;
+    color: #023535;
+    border: 1px solid #3C5469;
+    border-radius: 5px;
+}
+
+    .commentframe .usercomment {
+        width: 100%;
+        min-height: 20px;
+        background-color: #3C5469;
+        color:white;
+        float: left;
+        font-size: 14pt;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .commentframe .commnetCom {
+        padding: 10px 15px;
+        margin-top: 10px;
+    }

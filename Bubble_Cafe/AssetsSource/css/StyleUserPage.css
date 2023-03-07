@@ -171,23 +171,3 @@ body {
         border: 1px solid #A67360;
         border-radius: 90px;
     }
-
-.commentframe {
-    width: 100%;
-    color: #969696;
-    border: 1px solid #8C6A56;
-    border-radius:5px;
-}
-    .commentframe .usercomment {
-        width: 100%;
-        min-height: 20px;
-        background-color: #736A62;
-        float: left;
-        padding: 5px 10px;
-        font-size: 14pt;
-        border:1px solid black;
-    }
-    .commentframe .commnetCom {
-        padding: 10px 15px;
-        margin-top: 10px;
-    }

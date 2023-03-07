@@ -6,10 +6,10 @@
         <ItemTemplate>
             <div class="commentframe">
                 <div class="usercomment">
-                    <div style="float:left;">
+                    <div style="float:left; padding:5px 10px;">
                         <i class="fa-solid fa-at"></i><%# Eval("UserNickname") %>
                     </div>
-                    <div style="float:right;">
+                    <div style="float:right; padding:5px 10px;">
                         <%# Eval("CommentDateTime") %>
                     </div>
                 </div>
@@ -19,6 +19,10 @@
                 </div>
                 <div style="clear:both"></div>
             </div>
+            <div class="accept">
+            <asp:LinkButton ID="lbtn_acceptcitation" runat="server" CssClass="acceptbutton">Onayla</asp:LinkButton>
+            <asp:LinkButton ID="lbtn_deletecitation" runat="server" CssClass="rejectbutton">Reddet</asp:LinkButton>
+        </div>
         </ItemTemplate>
     </asp:Repeater>
 </asp:Content>
