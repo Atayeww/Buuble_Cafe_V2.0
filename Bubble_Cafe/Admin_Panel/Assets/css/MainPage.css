@@ -8,8 +8,11 @@ body {
 }
 
 .header {
-    min-height: 30px;
+    min-height: 55px;
     background-color: #EBF0F2;
+    width:100%;
+    position:fixed;
+    top:0px;
 }
 
     .header .icon {
@@ -17,6 +20,9 @@ body {
         background-color: #3C5469;
         float: left;
         padding: 5px 0px;
+        position:fixed;
+        left:0px;
+        top:0px;
     }
 
         .header .icon img {
@@ -31,6 +37,9 @@ body {
         float: right;
         margin-right: 20px;
         margin-top: 15px;
+        position: fixed;
+        right: 0px;
+        top: 0px;
     }
 
         .header .exit .exiticon {
@@ -44,6 +53,9 @@ body {
     height: 700px;
     background-color: #293742;
     float: left;
+    position:fixed;
+    top:55px;
+    left:0px;
 }
 
     .sidebar .tools {
@@ -69,4 +81,6 @@ body {
     min-height: 500px;
     float: left;
     padding: 10px;
+    margin-left:250px;
+    margin-top:55px;
 }

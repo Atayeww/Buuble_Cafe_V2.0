@@ -24,6 +24,18 @@ namespace Bubble_Cafe.Admin_Panel
                 rp_citationsAdmin.DataSource = dm.CitationListing(id, true);
                 rp_citationsAdmin.DataBind();
             }
+            rp_commentaccept.DataSource = dm.CommnetList(true);
+            rp_commentaccept.DataBind();
+        }
+
+        protected void lbtn_acceptcitation_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void lbtn_deletecitation_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

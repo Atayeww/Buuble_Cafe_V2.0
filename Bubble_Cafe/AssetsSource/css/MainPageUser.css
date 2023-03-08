@@ -9,10 +9,11 @@ body {
 
 .header {
     margin: 0px auto;
-    width: 1430px;
-    min-height: 30px;
     background-color: #F0E9E3;
     padding: 10px;
+    position:fixed;
+    left:50px;
+    right:50px;
 }
 
     .header .icon {

@@ -16,5 +16,10 @@ namespace Bubble_Cafe.Admin_Panel
             rp_commentaccept.DataSource = dm.CommnetList(false);
             rp_commentaccept.DataBind();
         }
+
+        protected void lbtn_deletecitation_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

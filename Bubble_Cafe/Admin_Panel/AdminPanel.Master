@@ -14,7 +14,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="header">
+        <div id="header" class="header">
             <div class="icon">
                 <a href="Default.aspx">
                     <img src="Assets/images/Bubble_Cafe_Icon_White.png" />

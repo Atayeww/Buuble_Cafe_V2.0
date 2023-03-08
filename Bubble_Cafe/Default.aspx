@@ -8,7 +8,7 @@
             <a href='CitUserList.aspx?citid=<%# Eval("ID") %>'>
                 <div class="citationDiv">
                 <div class="picture">
-                    <img src ='ImageSource/<%# Eval("BookImage") %>' style="width:270px"/>
+                    <img src ='ImageSource/<%# Eval("BookImage") %>' style="width:256px"/>
                 </div>
                 <div class="bookinfo">
                     <%# Eval("BookName") %> | <%# Eval("BookWriters") %> | <%# Eval("BookCategories") %>

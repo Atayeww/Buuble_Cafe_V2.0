@@ -4210,6 +4210,7 @@
     <Content Include="ImageSource\none.png" />
     <Content Include="Login.aspx" />
     <Content Include="Signup.aspx" />
+    <Content Include="UserEdit.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -4381,6 +4382,13 @@
     </Compile>
     <Compile Include="User.Master.designer.cs">
       <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserEdit.aspx.cs">
+      <DependentUpon>UserEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserEdit.aspx.designer.cs">
+      <DependentUpon>UserEdit.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

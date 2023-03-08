@@ -745,8 +745,9 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText = "UPDATE Users SET Name = @name, Surname = @surname, Nickname = @nickname, Mail = @mail, Password = @password, State = @state";
+                cmd.CommandText = "UPDATE Users SET Name = @name, Surname = @surname, Nickname = @nickname, Mail = @mail, Password = @password, State = @state WHERE ID = @id";
                 cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", users.ID);
                 cmd.Parameters.AddWithValue("@name", users.Name);
                 cmd.Parameters.AddWithValue("@surname", users.Surname);
                 cmd.Parameters.AddWithValue("@nickname", users.Nickname);

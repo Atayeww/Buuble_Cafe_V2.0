@@ -19,10 +19,10 @@
                 </div>
                 <div style="clear:both"></div>
             </div>
-            <div class="accept">
-            <asp:LinkButton ID="lbtn_acceptcitation" runat="server" CssClass="acceptbutton">Onayla</asp:LinkButton>
-            <asp:LinkButton ID="lbtn_deletecitation" runat="server" CssClass="rejectbutton">Reddet</asp:LinkButton>
+            <div class="accept" style="width:200px;">
+            <asp:LinkButton ID="lbtn_deletecitation" runat="server" CssClass="rejectbutton" OnClick="lbtn_deletecitation_Click">Reddet</asp:LinkButton>
         </div>
+            <div style="clear:both"></div>
         </ItemTemplate>
     </asp:Repeater>
 </asp:Content>

@@ -56,7 +56,7 @@
                     <i class="fa-solid fa-at"></i>
                     <asp:Label ID="lbl_username" runat="server" Style="margin-right: 15px; font-size:14pt;"></asp:Label>
                 <a href="#" class="others"><i class="fa-regular fa-bell"></i></a>
-                <a href="#" class="others"><i class="fa-solid fa-sliders"></i></a>
+                <a href="UserEdit.aspx" class="others"><i class="fa-solid fa-sliders"></i></a>
                     <asp:LinkButton ID="lbtn_userexit" runat="server" OnClick="lbtn_userexit_Click">Çıkış</asp:LinkButton>
                 </asp:Panel>
                 <asp:Panel ID="pnl_notlogin" runat="server" Visible="true" CssClass="user" style="float:right;">
@@ -66,6 +66,7 @@
             </div>
             <div style="clear: both;"></div>
         </div>
+        <div style="height:70px;"></div>
         <div class="contentContainer">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
