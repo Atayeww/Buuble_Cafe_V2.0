@@ -9,7 +9,7 @@
                 <asp:Panel ID="pnl_loginerror" runat="server" Visible="false" CssClass="loginerror">
                     <asp:Label ID="lbl_adminloginerror" runat="server" CssClass="attention">deneme</asp:Label>
                 </asp:Panel>
-                <h2 class="entry">Kayıt Ol</h2>
+                <h2 class="entry">Düzenle</h2>
                 <br />
                 <div class="raw">
                 <asp:TextBox ID="tb_username" runat="server" placeholder="Ad" CssClass="searchbox"></asp:TextBox>
