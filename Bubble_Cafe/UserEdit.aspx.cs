@@ -27,12 +27,12 @@ namespace Bubble_Cafe
         protected void lbtn_usersignupp_Click(object sender, EventArgs e)
         {
             Users users = (Users)Session["user"];
-            users1.Name = tb_username.Text;
-            users1.Surname = tb_usersurname.Text;
-            users1.Nickname = tb_usernickname.Text;
-            users1.Mail = tb_adminlogin.Text;
-            users1.Password = tb_adminpassword.Text;
-            users1.State = false;
+            users.Name = tb_username.Text;
+            users.Surname = tb_usersurname.Text;
+            users.Nickname = tb_usernickname.Text;
+            users.Mail = tb_adminlogin.Text;
+            users.Password = tb_adminpassword.Text;
+            users.State = false;
             if (dm.UsersEdit(users))
             {
                 lbl_adminloginerror.Text = "Düzenleme Başarılı";
