@@ -33,7 +33,7 @@
                     <td><%# Eval("Publisher") %></td>
                     <td><%# Eval("Page") %></td>
                     <td><%# Eval("ReleaseDate") %></td>
-                    <td>
+                    <td style="width:150px">
                         <a href='BookEdit.aspx?bid=<%# Eval("ID") %>' class="editbutton">Düzenle</a>
                         <asp:LinkButton ID="lbtn_bookdelete" runat="server" CssClass="deletebutton" CommandName="remove" CommandArgument='<%# Eval("ID") %>'>Sil</asp:LinkButton>
                     </td>
