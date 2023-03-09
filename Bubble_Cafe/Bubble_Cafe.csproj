@@ -4205,7 +4205,6 @@
     <Content Include="AssetsSource\fontawesome\svgs\solid\z.svg" />
     <Content Include="CitUserAdd.aspx" />
     <Content Include="CitUserList.aspx" />
-    <Content Include="CommentListUser.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="ImageSource\Bubble_Cafe_Brown.png" />
     <Content Include="ImageSource\none.png" />
@@ -4354,13 +4353,6 @@
     </Compile>
     <Compile Include="CitUserList.aspx.designer.cs">
       <DependentUpon>CitUserList.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CommentListUser.aspx.cs">
-      <DependentUpon>CommentListUser.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CommentListUser.aspx.designer.cs">
-      <DependentUpon>CommentListUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

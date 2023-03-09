@@ -16,6 +16,8 @@ namespace Bubble_Cafe
             if (Request.QueryString.Count != 0)
             {
                 int id = Convert.ToInt32(Request.QueryString["citid"]);
+                rp_commentlist.DataSource = dm.CommnetCitList(id);
+                rp_commentlist.DataBind();
                 Citations citations = dm.CitationGet(id);
                 ltrl_citation.Text = citations.Citation;
                 ltrl_citbookname.Text = citations.BookName;

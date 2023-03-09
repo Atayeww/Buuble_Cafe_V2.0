@@ -1125,6 +1125,32 @@ namespace DataAccessLayer
             catch { return null; }
             finally { con.Close(); }
         }
+        public List<Comment> CommnetCitList(int id)
+        {
+            try
+            {
+                List<Comment> list = new List<Comment>();
+                cmd.CommandText = "SELECT C.ID, C.Users_ID, U.Nickname, C.Citations_ID, C.CommentDateTime, C.Comment FROM Comments AS C JOIN Users AS U ON C.Users_ID = U.ID WHERE C.State = 0 AND C.ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Comment comment = new Comment();
+                    comment.ID = reader.GetInt32(0);
+                    comment.Users_ID = reader.GetInt32(1);
+                    comment.UserNickname = reader.GetString(2);
+                    comment.Citations_ID = reader.GetInt32(3);
+                    comment.CommentDateTime = reader.GetDateTime(4);
+                    comment.Commnet = reader.GetString(5);
+                    list.Add(comment);
+                }
+                return list;
+            }
+            catch { return null; }
+            finally { con.Close(); }
+        }
         public Comment CommnetGet(int id)
         {
             try
