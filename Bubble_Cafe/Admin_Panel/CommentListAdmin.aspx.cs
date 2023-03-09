@@ -11,15 +11,11 @@ namespace Bubble_Cafe.Admin_Panel
     public partial class CommentListAdmin : System.Web.UI.Page
     {
         DataModel dm = new DataModel();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             rp_commentaccept.DataSource = dm.CommnetList(false);
             rp_commentaccept.DataBind();
-        }
-
-        protected void lbtn_deletecitation_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

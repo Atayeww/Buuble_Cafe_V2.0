@@ -251,16 +251,19 @@ body {
             background-color: #FF4858;
         }
 .commentframe {
-    margin-top:10px;
-    width: 100%;
-    color: #023535;
-    border: 1px solid #3C5469;
+    overflow: hidden;
+    width: 260px;
+    height: 400px;
+    background-color: #FFFFFF;
+    border: 1px solid #729599;
+    color: #969696;
     border-radius: 5px;
+    margin: 10px;
+    float: left;
+    box-shadow: 7px 8px 7px -5px rgba(0,0,0,0.37);
 }
 
     .commentframe .usercomment {
-        width: 100%;
-        min-height: 20px;
         background-color: #3C5469;
         color:white;
         float: left;

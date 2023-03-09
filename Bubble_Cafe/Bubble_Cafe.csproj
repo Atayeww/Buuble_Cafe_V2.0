@@ -2137,6 +2137,7 @@
     <Content Include="Admin_Panel\CitationListing.aspx" />
     <Content Include="Admin_Panel\CitationMoreDetail.aspx" />
     <Content Include="Admin_Panel\CommentListAdmin.aspx" />
+    <Content Include="Admin_Panel\CommentMoreDetail.aspx" />
     <Content Include="Admin_Panel\Default.aspx" />
     <Content Include="Admin_Panel\UsersAdd.aspx" />
     <Content Include="Admin_Panel\UsersListing.aspx" />
@@ -4290,6 +4291,13 @@
     </Compile>
     <Compile Include="Admin_Panel\CommentListAdmin.aspx.designer.cs">
       <DependentUpon>CommentListAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Panel\CommentMoreDetail.aspx.cs">
+      <DependentUpon>CommentMoreDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Panel\CommentMoreDetail.aspx.designer.cs">
+      <DependentUpon>CommentMoreDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin_Panel\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

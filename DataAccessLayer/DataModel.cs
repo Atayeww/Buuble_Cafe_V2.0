@@ -1125,13 +1125,12 @@ namespace DataAccessLayer
             catch { return null; }
             finally { con.Close(); }
         }
-        public Comment CommnetGet(int id, bool state)
+        public Comment CommnetGet(int id)
         {
             try
             {
-                cmd.CommandText = "SELECT C.ID, C.Users_ID, U.Nickname, C.Citations_ID, C.CommentDateTime, C.Comment FROM Comments AS C JOIN Users AS U ON C.Users_ID = U.ID WHERE C.State = @state AND C.ID = @id";
+                cmd.CommandText = "SELECT C.ID, C.Users_ID, U.Nickname, C.Citations_ID, C.CommentDateTime, C.Comment, C.State FROM Comments AS C JOIN Users AS U ON C.Users_ID = U.ID WHERE C.ID = @id";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@state", state);
                 cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -1144,6 +1143,7 @@ namespace DataAccessLayer
                     comment.Citations_ID = reader.GetInt32(3);
                     comment.CommentDateTime = reader.GetDateTime(4);
                     comment.Commnet = reader.GetString(5);
+                    comment.State = reader.GetBoolean(6);
                 }
                 return comment;
             }
@@ -1166,6 +1166,30 @@ namespace DataAccessLayer
                 return true;
             }
             catch { return false; }
+            finally { con.Close(); }
+        }
+        public void CommentState(int id)
+        {
+            try
+            {
+                cmd.CommandText = "UPDATE Comments SET State = 0 WHERE ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            finally { con.Close(); }
+        }
+        public void CommentHardDelete(int id)
+        {
+            try
+            {
+                cmd.CommandText = "DELETE FROM Comments WHERE ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
             finally { con.Close(); }
         }
         #endregion

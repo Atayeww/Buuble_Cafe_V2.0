@@ -37,7 +37,7 @@
         <div style="clear: both"></div>
         <div class="accept">
             <asp:LinkButton ID="lbtn_acceptcitation" runat="server" CssClass="acceptbutton" OnClick="lbtn_acceptcitation_Click">Onayla</asp:LinkButton>
-            <asp:LinkButton ID="lbtn_deletecitation" runat="server" CssClass="rejectbutton" OnClick="lbtn_deletecitation_Click">Reddet</asp:LinkButton>
+            <asp:LinkButton ID="lbtn_deletecitation" runat="server" CssClass="rejectbutton" OnClick="lbtn_deletecitation_Click">Sil</asp:LinkButton>
         </div>
     </div>
 </asp:Content>
