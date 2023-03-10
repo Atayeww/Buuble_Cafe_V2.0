@@ -800,12 +800,12 @@ namespace DataAccessLayer
         #endregion
 
         #region Citation
-        public List<Citations> CitationListing()
+        public List<Citations> CitationListing(int id)
         {
             try
             {
                 List<Citations> list = new List<Citations>();
-                cmd.CommandText = "SELECT C.ID, C.Users_ID, U.Nickname, C.Books_ID, B.Name, C.Citation, C.Opinion, C.Page, C.CitationView, C.AddDateTime, C.Liked, C.Disliked, C.State FROM Citations AS C JOIN Users AS U ON C.Users_ID = U.ID JOIN Books AS B ON C.Books_ID = B.ID WHERE C.State = 0";
+                cmd.CommandText = "SELECT C.ID, C.Users_ID, U.Nickname, C.Books_ID, B.Name, C.Citation, C.Opinion, C.Page, C.CitationView, C.AddDateTime, C.Liked, C.Disliked, C.State, B.Categories_ID FROM Citations AS C JOIN Users AS U ON C.Users_ID = U.ID JOIN Books AS B ON C.Books_ID = B.ID WHERE C.State = 0";
                 cmd.Parameters.Clear();
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -825,6 +825,7 @@ namespace DataAccessLayer
                     citations.Liked = reader.GetInt32(10);
                     citations.Disliked = reader.GetInt32(11);
                     citations.State = reader.GetBoolean(12);
+                    citations.Categories_ID= reader.GetInt32(13);
                     list.Add(citations);
                 }
                 return list;
@@ -1216,6 +1217,61 @@ namespace DataAccessLayer
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
+            finally { con.Close(); }
+        }
+        public List<Comment> CommnetListUser(int id) //Bunu daha kullanmadım
+        {
+            try
+            {
+                List<Comment> list = new List<Comment>();
+                cmd.CommandText = "SELECT C.ID, C.Users_ID, U.Nickname, C.Citations_ID, C.CommentDateTime, C.Comment FROM Comments AS C JOIN Users AS U ON C.Users_ID = U.ID WHERE C.Users_ID = @users_ID";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@users_ID", id);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Comment comment = new Comment();
+                    comment.ID = reader.GetInt32(0);
+                    comment.Users_ID = reader.GetInt32(1);
+                    comment.UserNickname = reader.GetString(2);
+                    comment.Citations_ID = reader.GetInt32(3);
+                    comment.CommentDateTime = reader.GetDateTime(4);
+                    comment.Commnet = reader.GetString(5);
+                    list.Add(comment);
+                }
+                return list;
+            }
+            catch { return null; }
+            finally { con.Close(); }
+        }
+        public List<Comment> CommentByCategory(int id) //Yanlış kod ama silmek istemedim çünkü 30 dk uğraştım
+        {
+            try
+            {
+                List<Comment> list = new List<Comment>();
+                cmd.CommandText = "SELECT C.ID, C.Users_ID, U.Nickname, C.Citations_ID, C.CommentDateTime, C.Comment, CT.Books_ID, B.Categories_ID, CAT.ID FROM Comments AS C JOIN Users AS U ON C.Users_ID = U.ID JOIN Citations AS CT ON C.Citations_ID = CT.ID JOIN Books AS B ON CT.Books_ID = B.ID JOIN Categories AS CAT ON B.Categories_ID = CAT.ID WHERE C.State = 0 AND C.ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Comment comment = new Comment();
+                    comment.ID = reader.GetInt32(0);
+                    comment.Users_ID = reader.GetInt32(1);
+                    comment.UserNickname = reader.GetString(2);
+                    comment.Citations_ID = reader.GetInt32(3);
+                    comment.CommentDateTime = reader.GetDateTime(4);
+                    comment.Commnet = reader.GetString(5);
+                    comment.Books_ID = reader.GetInt32(6);
+                    comment.Categories_ID = reader.GetInt32(7);
+                    comment.CategoryID = reader.GetInt32(8);
+                    list.Add(comment);
+                }
+                return list;
+            }
+            catch { return null; }
             finally { con.Close(); }
         }
         #endregion

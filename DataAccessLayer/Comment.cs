@@ -16,5 +16,8 @@ namespace DataAccessLayer
         public DateTime CommentDateTime { get; set; }
         public string Commnet { get; set; }
         public bool State { get; set; }
+        public int Books_ID { get; set; }
+        public int Categories_ID { get; set; }
+        public int CategoryID { get; set; }
     }
 }

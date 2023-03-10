@@ -27,5 +27,6 @@ namespace DataAccessLayer
         public int Liked { get; set; }
         public int Disliked { get; set; }
         public bool State { get; set; }
+        public int Categories_ID { get; set; }
     }
 }
