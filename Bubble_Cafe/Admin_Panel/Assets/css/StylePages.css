@@ -145,7 +145,6 @@ body {
 
 .citationDiv {
     overflow: hidden;
-    padding: 5px;
     width: 260px;
     height: 400px;
     background-color: #FFFFFF;
@@ -166,14 +165,18 @@ body {
         font-family: 'Times New Roman';
         color: #023535;
         font-size: 15pt;
+        padding:5px;
+    }
+    .citationDiv .bookcitation{
+        padding:5px;
     }
 
-.citdetail {
-    color: #3C5469;
-    height: 100%;
-    width: 100%;
-    padding: 10px;
-}
+    .citdetail {
+        color: #3C5469;
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+    }
 
     .citdetail .citimage {
         margin-left: auto;

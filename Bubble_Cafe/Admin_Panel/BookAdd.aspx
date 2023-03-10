@@ -25,8 +25,8 @@
             <div class="raw">
                  <label class="label">Yazar Adı ve Soyadı</label>
                 <br />
-                <asp:TextBox ID="tb_addwritername" runat="server" CssClass="searchbox"></asp:TextBox>
-                <asp:TextBox ID="tb_addwritersurname" runat="server" CssClass="searchbox"></asp:TextBox>
+                <asp:TextBox ID="tb_addwritername" runat="server" CssClass="searchbox" style="width:220px"></asp:TextBox>
+                <asp:TextBox ID="tb_addwritersurname" runat="server" CssClass="searchbox" style="width:220px"></asp:TextBox>
             </div>
             <div class="raw">
                 <label class="label">Yayınevi</label>

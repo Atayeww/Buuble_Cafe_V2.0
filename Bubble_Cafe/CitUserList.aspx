@@ -60,7 +60,7 @@
         <div class="commentlist">
             <asp:Repeater ID="rp_commentlist" runat="server">
                 <ItemTemplate>
-                    <div class="citusername">
+                    <div class="citusername" style="background-color:#F2E5D5; color:#8C7C68;">
                         <div style="float: left; font-size: 14pt;">
                             <i class="fa-solid fa-at"></i>
                             <%# Eval("UserNickname") %>
@@ -68,6 +68,7 @@
                         <div style="float: right; font-size: 11pt;">
                             <%# Eval("CommentDateTime") %>
                         </div>
+                        <div style="clear:both"></div>
                         </div>
                         <div class="citation">
                             <%# Eval("Commnet") %>
