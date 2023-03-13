@@ -4203,6 +4203,7 @@
     <Content Include="AssetsSource\fontawesome\svgs\solid\yen-sign.svg" />
     <Content Include="AssetsSource\fontawesome\svgs\solid\yin-yang.svg" />
     <Content Include="AssetsSource\fontawesome\svgs\solid\z.svg" />
+    <Content Include="CategoryChoose.aspx" />
     <Content Include="CitUserAdd.aspx" />
     <Content Include="CitUserList.aspx" />
     <Content Include="Default.aspx" />
@@ -4339,6 +4340,13 @@
     </Compile>
     <Compile Include="Admin_Panel\WriterListing.aspx.designer.cs">
       <DependentUpon>WriterListing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryChoose.aspx.cs">
+      <DependentUpon>CategoryChoose.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CategoryChoose.aspx.designer.cs">
+      <DependentUpon>CategoryChoose.aspx</DependentUpon>
     </Compile>
     <Compile Include="CitUserAdd.aspx.cs">
       <DependentUpon>CitUserAdd.aspx</DependentUpon>

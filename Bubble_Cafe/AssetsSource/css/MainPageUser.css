@@ -11,9 +11,9 @@ body {
     margin: 0px auto;
     background-color: #F0E9E3;
     padding: 10px;
-    position:fixed;
-    left:50px;
-    right:50px;
+    position: fixed;
+    left: 50px;
+    right: 50px;
 }
 
     .header .icon {
@@ -84,6 +84,7 @@ body {
         }
 
     .menu .hiddenmenu tbody {
+        width: 610px;
         background-color: #F0E9E3;
         position: absolute;
         box-shadow: 12px 11px 10px -9px rgba(0,0,0,0.33);
@@ -98,9 +99,13 @@ body {
     }
 
     .menu .hiddenmenu tbody tr td {
-        padding: 10px;
+        padding:10px;
         text-align: center;
     }
+        .menu .hiddenmenu tbody tr td a .categorylist{
+            float:left;
+            min-width:80px;
+        }
 
         .menu .hiddenmenu tbody tr td a {
             text-decoration: none;
@@ -110,9 +115,9 @@ body {
             .menu .hiddenmenu tbody tr td a:hover {
                 color: #A68C6D;
             }
+
 .contentContainer {
     width: 1450px;
     margin-left: auto;
     margin-right: auto;
 }
-

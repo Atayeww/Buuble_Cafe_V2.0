@@ -521,7 +521,7 @@ namespace DataAccessLayer
                 cmd.ExecuteNonQuery();
                 return true;
             }
-            catch{ return false; }
+            catch { return false; }
             finally { con.Close(); }
         }
         public int BookAddReturnId(Books books)
@@ -805,8 +805,9 @@ namespace DataAccessLayer
             try
             {
                 List<Citations> list = new List<Citations>();
-                cmd.CommandText = "SELECT C.ID, C.Users_ID, U.Nickname, C.Books_ID, B.Name, C.Citation, C.Opinion, C.Page, C.CitationView, C.AddDateTime, C.Liked, C.Disliked, C.State, B.Categories_ID FROM Citations AS C JOIN Users AS U ON C.Users_ID = U.ID JOIN Books AS B ON C.Books_ID = B.ID WHERE C.State = 0";
+                cmd.CommandText = "SELECT C.ID, C.Users_ID, U.Nickname, C.Books_ID, B.Name, B.Image, B.Writers_ID, W.Name + ' ' + W.Surname, B.Categories_ID, CY.Name, C.Citation, C.Opinion, C.Page, C.CitationView, C.AddDateTime, C.Liked, C.Disliked, C.State FROM Citations AS C JOIN Users AS U ON C.Users_ID = U.ID JOIN Books AS B ON C.Books_ID = B.ID JOIN Writers AS W ON B.Writers_ID = W.ID JOIN Categories AS CY ON B.Categories_ID = CY.ID WHERE C.State = 0 AND B.Categories_ID = @id";
                 cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -817,15 +818,19 @@ namespace DataAccessLayer
                     citations.User = reader.GetString(2);
                     citations.Books_ID = reader.GetInt32(3);
                     citations.BookName = reader.GetString(4);
-                    citations.Citation = reader.GetString(5);
-                    citations.Opinion = reader.GetString(6);
-                    citations.Page = reader.GetString(7);
-                    citations.CitationView = reader.GetInt32(8);
-                    citations.AddDateTime = reader.GetDateTime(9);
-                    citations.Liked = reader.GetInt32(10);
-                    citations.Disliked = reader.GetInt32(11);
-                    citations.State = reader.GetBoolean(12);
-                    citations.Categories_ID= reader.GetInt32(13);
+                    citations.BookImage = reader.GetString(5);
+                    citations.BookWriters_ID = reader.GetInt32(6);
+                    citations.BookWriters = reader.GetString(7);
+                    citations.BookCategories_ID = reader.GetInt32(8);
+                    citations.BookCategories = reader.GetString(9);
+                    citations.Citation = reader.GetString(10);
+                    citations.Opinion = reader.GetString(11);
+                    citations.Page = reader.GetString(12);
+                    citations.CitationView = reader.GetInt32(13);
+                    citations.AddDateTime = reader.GetDateTime(14);
+                    citations.Liked = reader.GetInt32(15);
+                    citations.Disliked = reader.GetInt32(16);
+                    citations.State = reader.GetBoolean(17);
                     list.Add(citations);
                 }
                 return list;
@@ -852,7 +857,7 @@ namespace DataAccessLayer
                     citations.Books_ID = reader.GetInt32(3);
                     citations.BookName = reader.GetString(4);
                     citations.BookImage = reader.GetString(5);
-                    citations.BookWriters_ID= reader.GetInt32(6);
+                    citations.BookWriters_ID = reader.GetInt32(6);
                     citations.BookWriters = reader.GetString(7);
                     citations.BookCategories_ID = reader.GetInt32(8);
                     citations.BookCategories = reader.GetString(9);
@@ -1114,10 +1119,10 @@ namespace DataAccessLayer
                 {
                     Comment comment = new Comment();
                     comment.ID = reader.GetInt32(0);
-                    comment.Users_ID= reader.GetInt32(1);
+                    comment.Users_ID = reader.GetInt32(1);
                     comment.UserNickname = reader.GetString(2);
                     comment.Citations_ID = reader.GetInt32(3);
-                    comment.CommentDateTime= reader.GetDateTime(4);
+                    comment.CommentDateTime = reader.GetDateTime(4);
                     comment.Commnet = reader.GetString(5);
                     list.Add(comment);
                 }

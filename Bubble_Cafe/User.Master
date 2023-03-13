@@ -30,6 +30,21 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <td>
+                                <div>
+                                    <asp:Repeater ID="rp_categorymenu" runat="server">
+                                        <ItemTemplate>
+                                            <a href='CategoryChoose.aspx?ccid=<%# Eval("ID") %>'>
+                                                <div class="categorylist">
+                                                    <%# Eval("Name") %>
+                                                </div>
+                                            </a>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                </div>
+                            </td>
+                        </tr>
+                        <%--<tr>
                             <td><a href="#">Roman</a></td>
                             <td><a href="#">Hikaye</a></td>
                             <td><a href="#">Tarih</a></td>
@@ -46,27 +61,26 @@
                             <td><a href="#">Psikoloji</a></td>
                             <td><a href="#">Felsefe</a></td>
                             <td><a href="#">Soyoloji</a></td>
-                        </tr>
+                        </tr>--%>
                     </tbody>
                 </table>
                 <a href="CitUserAdd.aspx" class="others">Alıntı Yap</a>
             </div>
             <div class="login">
-                <asp:Panel ID="pnl_login" runat="server" Visible="false" CssClass="user" style="float:right;">
+                <asp:Panel ID="pnl_login" runat="server" Visible="false" CssClass="user" Style="float: right;">
                     <i class="fa-solid fa-at"></i>
-                    <asp:Label ID="lbl_username" runat="server" Style="margin-right: 15px; font-size:14pt;"></asp:Label>
-                <a href="#" class="others"><i class="fa-regular fa-bell"></i></a>
-                <a href="UserEdit.aspx" class="others"><i class="fa-solid fa-sliders"></i></a>
+                    <asp:Label ID="lbl_username" runat="server" Style="margin-right: 15px; font-size: 14pt;"></asp:Label>
+                    <a href="UserEdit.aspx" class="others"><i class="fa-solid fa-sliders"></i></a>
                     <asp:LinkButton ID="lbtn_userexit" runat="server" OnClick="lbtn_userexit_Click">Çıkış</asp:LinkButton>
                 </asp:Panel>
-                <asp:Panel ID="pnl_notlogin" runat="server" Visible="true" CssClass="user" style="float:right;">
+                <asp:Panel ID="pnl_notlogin" runat="server" Visible="true" CssClass="user" Style="float: right;">
                     <a href="Signup.aspx" style="margin-right: 15px;">Kayıt Ol</a>
                     <a href="Login.aspx">Oturum Aç</a>
                 </asp:Panel>
             </div>
             <div style="clear: both;"></div>
         </div>
-        <div style="height:70px;"></div>
+        <div style="height: 70px;"></div>
         <div class="contentContainer">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>

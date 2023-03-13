@@ -25,6 +25,8 @@ namespace Bubble_Cafe
                 pnl_login.Visible = false;
                 pnl_notlogin.Visible = true;
             }
+            rp_categorymenu.DataSource = dm.CategoryListing();
+            rp_categorymenu.DataBind();
         }
 
         protected void lbtn_userexit_Click(object sender, EventArgs e)
